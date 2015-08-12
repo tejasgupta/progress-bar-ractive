@@ -16,30 +16,30 @@
         <p>Copyright &copy; 2015 Tejas Gupta. Licensed MIT</p>
     </footer>
 </body>
-    <script id='template' type='text/ractive'>
-        <h1>Progress Bars Demo</h1>
-        {{#each progressbar}}
-            <div id="{{id}}" class="progress">
-                <p class="progress-value" data-value="{{value}}">{{value}}%</p>
-                <div class="{{add}}"style="width: {{value}}%;"></div>
+<script id='template' type='text/ractive'>
+    <h1>Progress Bars Demo</h1>
+    {{#each progressbar}}
+        <div id="{{id}}" class="progress">
+            <p class="progress-value" data-value="{{value}}">{{value}}%</p>
+            <div class="{{add}}"style="width: {{value}}%;"></div>
+        </div>
+    {{/each}}
+    <div class="toolbar">
+        <div>
+            <select value="{{selectedBar}}" on-change="switchProgressbar:{{selectedBar}}">
+            {{#each progressbar}}
+                <option value="{{id}}">{{text}}</option>
+            {{/each}}   
+            </select>
+        </div>
+        {{#each button}}
+            <div>
+                <input type="button" value="{{this}}" on-click="activate" >
             </div>
         {{/each}}
-        <div class="toolbar">
-            <div>
-                <select value="{{selectedBar}}" on-change="switchProgressbar:{{selectedBar}}">
-                {{#each progressbar}}
-                    <option value="{{id}}">{{text}}</option>
-                {{/each}}   
-                </select>
-            </div>
-            {{#each button}}
-                <div>
-                    <input type="button" value="{{this}}" on-click="activate" >
-                </div>
-            {{/each}}
-        </div>
-    </script>
-    
-    <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
-    <script type="text/javascript" src="script/main.js"></script>
+    </div>
+</script>
+
+<script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+<script type="text/javascript" src="script/main.js"></script>
 </html>
