@@ -1,0 +1,16 @@
+{
+	"name": "ractive-events-progress-bar-ractive",
+	"repo": "git://github.com/Tejas/progress-bar-ractive.git",
+	"description": "ractive-events-progress-bar-ractive",
+	"version": "0.1.0",
+	"keywords": [],
+	"dependencies": {
+		"ractivejs/ractive": "^0.5.4"
+	},
+	"development": {},
+	"license": "MIT",
+	"main": "ractive-events-progress-bar-ractive.js",
+	"scripts": [
+		"ractive-events-progress-bar-ractive.js"
+	]
+}

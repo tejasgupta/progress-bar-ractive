@@ -1,0 +1,67 @@
+body{
+	background-color: black;
+}
+#container{
+	background-color: white;
+	border-radius: 10px;
+	height: 300px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	padding: 10px 40px;
+	color: gray;
+	h1{
+		font-size: 32px;
+		margin: 10px auto 30px auto;
+	}
+	.toolbar{
+		& > div{
+			float: left;
+			margin-right: 10px;
+			input{
+				border-radius: 5px;
+				border: 1px solid black;
+				padding: 0px 10px;
+				background-color: white;
+				&:active{
+					background: blue;	
+				}
+			}
+		}
+	}
+}
+footer{
+	text-align: center;
+    position: absolute;
+	bottom: 0px;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid gray;
+}
+.progress{
+	height: 30px;
+	width: 100%;
+	background-color: white;
+	border: 1px solid black;
+	overflow: hidden;
+	position: relative;
+	& > p{
+		text-align: center;
+		position: absolute;
+		z-index: 4;
+		left: 148px;
+		top: 4px;
+		color: black;
+		font-weight: bold;
+	}
+	& > div{
+		height: 100%;
+		background-color: aqua;
+	}
+	.completed{
+		background-color: red;
+	}
+}
+
+
